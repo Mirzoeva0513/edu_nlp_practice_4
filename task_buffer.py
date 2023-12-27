@@ -37,7 +37,31 @@ class Buffer:
     """..."""
 
     ### ваше решение: ###
+class Buffer:
+    def __init__(self):
+        self.current_part = []
+ 
+    def add(self, *a):
+        for number in a:
+            self.current_part.append(number)
+            if len(self.current_part) >= 5:
+                self.sum_and_print()
+ 
+    def get_current_part(self):
+        return self.current_part
+ 
+    def sum_and_print(self):
+        if len(self.current_part) >= 5:
+            print(sum(self.current_part[:5]))
+            self.current_part = self.current_part[5:]
 
+
+### конец решения ###
+buf = Buffer()
+buf.add(1, 2, 3)
+buf.add(4, 5, 6, 7, 8, 9)
+buf.add(10, 11)
+print(buf.get_current_part())  # Вывод: [10, 11]
 
 
     ### конец решения ###

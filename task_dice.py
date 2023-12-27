@@ -20,3 +20,21 @@ from random import randint
 
 class Die:
     ### ваше решение: ###
+from random import randint
+ 
+class Die:
+    def __init__(self, faces=6):
+        self.faces = faces
+ 
+    def roll(self):
+        return randint(1, self.faces)
+ 
+# Создание экземпляров Die с разным количеством граней
+die_6 = Die()  # Кость с 6 гранями (по умолчанию)
+die_16 = Die(faces=16)  # Кость с 16 гранями
+die_20 = Die(faces=20)  # Кость с 20 гранями
+ 
+# Проверка работы броска кости
+print(die_6.roll())  # Бросок кости с 6 гранями
+print(die_16.roll())  # Бросок кости с 16 гранями
+print(die_20.roll())  # Бросок кости с 20 гранями

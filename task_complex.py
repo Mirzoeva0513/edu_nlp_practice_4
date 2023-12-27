@@ -12,7 +12,15 @@ class Complex:
     """Custom implementation of a complex number."""
 
     ### ваше решение: ###
+x = Complex(1, 2)
+y = Complex(3, 4)
 
+x == y
+
+print(x + y)  # Вывод: 4+6i
+print(x - y)  # Вывод: -2-2i
+print(x * y)  # Вывод: -5+10i
+print(x / y)  # Вывод: 0.44+0.08i
     
 
     ### конец решения ###
